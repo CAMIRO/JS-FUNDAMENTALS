@@ -1,19 +1,45 @@
-// checkout here: https://www.udemy.com/course/understand-javascript/learn/lecture/2322828#overview
+//// checkout here: https://www.udemy.com/course/understand-javascript/learn/lecture/2322828#overview
 
-// BY VALUES
-// primitive values
+// BY VALUE (primitives)
+let a = 3;
+let b;
 
-let a;
+b = a; //// This will create a copy (SEPARATE LOCATION)
 
-a = 3;
+a = 2;
 
-b = a; // This will create a copy (SEPARATE LOCATION)
+console.log(a);
+console.log(b);
 
 console.log(a === b);
 
-// BY REFERENCE
-// functions and objects
+// BY REFERENCE ( all objects including functions )
 
-c = {};
+let c = { greet: "hi" };
+let d;
 
-c = d; // This will point to the same location in memory
+d = c; //// This will point to the same location in memory
+
+c.greet = "hola";
+
+console.log(c);
+console.log(d);
+
+console.log(c === d);
+
+//// by reference ( even as parameters )
+
+const justAFunction = (obj) => {
+  obj.greet = "Bonjour";
+};
+
+justAFunction(d);
+console.log(c);
+console.log(d);
+
+//// WARNING: equals operator sets up new memory space (new address):
+
+c = { greet: "howdy" };
+
+console.log(c);
+console.log(d);
