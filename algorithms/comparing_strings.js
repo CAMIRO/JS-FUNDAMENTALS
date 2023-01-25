@@ -8,8 +8,7 @@
 
 // This function takes two parameters, characters and sentence.
 // The function checks if it is possible to generate the sentence
-// using the characters. It returns true if it is possible, otherwise
-// it returns false.
+// using the characters. It returns true if it is possible, otherwise it returns false.
 const generateSentence = (characters, sentence) => {
   // write your solution here
   let charMap = {}; // Create an object to store character count
