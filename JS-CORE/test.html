@@ -1,0 +1,253 @@
+<!-- https://www.youtube.com/watch?v=riloPTtAuAM&t=601s 
+<script>
+    // console.warn(!true) // 1
+    // console.warn(typeof !true) // num
+</script>
+
+<script>
+    // Object access
+    // let data = 'size';
+    // const bird = {
+    //     size: 'small',
+    // }
+    // console.warn(bird[data]) //small
+    // console.warn(bird['size']) //small
+    // console.warn(bird.size) //small
+    // console.warn(bird.data) // undefined
+</script>
+<script>
+    // BY VALUE (primitives)
+    // let a = 3;
+    // let b;
+
+    // b = a; //// This will create a copy (SEPARATE LOCATION)
+
+    // a = 2;
+
+    // console.log(a);
+    // console.log(b);
+    // console.log(a === b);
+
+</script>
+<script>
+    // BY REFERENCE ( all objects including functions )
+    // let c = { name: 'peter'}
+    // let d;
+
+    // d = c;  // This will point to the same location in memory
+    // c.name = 'john'
+    // console.log(d.name); // john 
+</script>
+<script>
+    // var x;
+    // var x=10; // declaring var x twice: this is possible
+    // console.log(x); // 10
+</script>
+<script>
+    // var x;
+    // let x = 10;
+    // console.log(x); // Uncaught SyntaxError: Identifier 'x' has already been declared 
+    // // this is because var has a global scope while let cant do that (unless it has a different scope)
+</script>
+<script>
+    // let number = 0;
+    // console.log(number++); // 0
+    // console.log(++number); // 2
+    // console.log(number); // 2
+</script>
+<script>
+    // function getAge(...args){
+    //     console.log(args); // [21]
+    //     console.log(typeof args); // object
+    // }
+    // getAge(21)
+</script>
+<script>
+    // function getAge(){
+    //     'use strict'
+    //     age = 21;
+    //     console.log(age); // ReferenceError: age is not defined (because age has not a let or var or const"we cant do hoisting")
+    // }
+    // getAge()
+</script>
+<script>
+    // const sum = eval('10*10+5')
+    // console.warn(sum); // 105
+</script>
+<script>
+    // sessionStorage.setItem('cool-secret', 123);
+    // // how long cool-secret is accessible?
+    // // Answer: after we close the tab or close the browser
+</script>
+<script>
+    // const obj = {1:'a',2:'b', hello:'c'}
+    // console.log( obj.hasOwnProperty('1')); // true
+    // console.log(obj.hasOwnProperty(1)); // true 
+    // console.log( obj.hasOwnProperty('hello')); // true
+    // console.log(obj.hasOwnProperty(hello)); // Uncaught ReferenceError: hello is not defined 
+</script>
+<script>
+    // const obj = {a:'one',b:'two',a:'repeat'}
+    // console.log(obj); // output: {a: 'repeat', b: 'two'}
+
+</script>
+<script>
+    // for(let i = 1; i < 5; i++){    
+    //     if (i === 3) continue
+    //     console.log(i); // output 1,2,4
+    // }
+</script>
+<script>
+    // const one = () => console.log('First');
+    // const two = () => setTimeout(()=> console.log('Two'));
+    // const three = () => console.log('Three');
+
+    // two();
+    // one();
+    // three();
+
+    // // output : First, Three, Two
+</script>
+
+<!-- <div onclick="console.log('One')">
+    <div onclick="console.log('Two')" >
+        <button onclick="console.log('Three')">Click Me</button>
+    </div>
+</div>
+
+output: Three, Two, One 
+-->
+<script>
+    // const person = {name: 'Mario'}
+
+    // function sayHi(age) {
+    //     return `${this.name} is ${age}`
+    // }
+    // console.log(sayHi.call(person, 21)); // Mario is 21
+    // console.log(sayHi.bind(person, 21)); // ƒ sayHi(age) {...} // we need to call when is binding
+    // console.log(sayHi.bind(person, 21)()); // Mario is 21
+    
+</script>
+<script>
+    // function sayHi() {
+    //     return (() => 0)()
+    // }
+    // console.log(typeof sayHi()); // number
+</script>
+<script>
+    // function sayHi() {
+    //     return () => 0;
+    // }
+    // console.log(typeof sayHi()); // function
+</script>
+<script>
+    // console.log(typeof typeof 1); // string
+</script>
+<script>
+    // const numbers = [1,2,3]
+    // numbers[9] = 11;
+    // console.log(numbers); // [1,2,3,empty x 6, 11]
+
+</script>
+<script>
+    // const numbers = [1,2,3]
+    // numbers[3] = numbers;
+    // console.log(numbers); // [1,2,3,[1,2,3,[1,2,3,[1,2,3, and so on]]]]
+</script>
+<script>
+    // console.log(!null); // true
+    // console.log(!!null); // false
+    // console.log(!""); // true
+    // console.log(!!""); // false
+    // console.log(!1); // false
+    // console.log(!!1); // true
+</script>
+<script>
+    // console.warn(setInterval(()=> console.log('Hi'),1000)); // 1
+    // console.warn(setInterval(()=> console.log('Hi'),1000)); // 2
+    // console.warn(setInterval(()=> console.log('Hi'),1000)); // 3
+
+</script>
+<script>
+    // console.log([...'camilo']);//['c', 'a', 'm', 'i', 'l', 'o']
+
+</script>
+<script>
+    // let data = 3 + 4 + '5' 
+    // console.log(data); // 75
+    // console.log(typeof data); // string
+</script>
+<script>
+    // it is taking typeof 3 and executing first 
+    // console.log(typeof 3 + 4 + '5'); // number45 
+</script>
+<script>
+    // let num = +'5' // if you put a + before a string, it will convert into a number
+    // let char = +'a' // event letters: This will be NaN
+    // console.log(typeof num);
+</script>
+<script>
+    // console.log(typeof (3 + 4 + '5' )); // string
+    // console.log(typeof (3 + 4 + + '5' )); // number
+</script>
+<script>
+    // console.log(typeof []); // Object 
+    // console.log([]==[]); // False: memory locations
+</script>
+<script>
+    // let data = [1,2,3].map(num => {
+    //     if(typeof num === 'number') return;
+    //     return num *2
+    // })
+    // console.warn(data); // [undefined, undefined, undefined]
+</script>
+<script>
+    // function getInfo(member) {
+    //     member.name = 'juan'
+    // }
+
+    // const person = { name: 'sarah'}
+
+    // getInfo(person)
+
+    // console.log(person); // { name: 'juan'} because objs are passed by reference in function's parameters
+</script>
+<script>
+    // function Car() {
+    //     this.make = 'Nissan';
+    //     return { make : 'Toyota' }
+    // }
+    // const myCar = new Car();
+    // console.log(myCar.make); // Toyota (if we return something it will overwrite the key )
+</script>
+<script>
+    // (()=>{
+    //     let x = (y = 10)
+    // })();
+    // console.log(typeof x); // undefined because we are using let which the scope is always local, no global. so it only exist in the IIFE function 
+</script>
+<script>
+    // (()=>{
+    //     let x = y = 10
+    // })();
+    // console.log(typeof y); // number because let x = y = 10 can also be written like this:
+    // // let x;
+    // // y
+    // // and that makes y to be declare by default as var. so it has global scope
+</script>
+<script>
+    // (() => {
+    //     let x = y = 10;
+    // })();
+    // (()=>{
+    //     let x = y = 20;
+    // })()
+    // console.log(y); // 20 (var y can be overwritten and it exist in the global env )
+</script>
+<script>
+    //console.warn(!true - true); // -1 because 0 - 1 = -1
+
+</script>
+<script>
+ // console.warn(true + +'10' ); // 11
+</script>
