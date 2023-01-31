@@ -1,0 +1,10 @@
+{
+  "liveServer.settings.AdvanceCustomBrowserCmdLine": "",
+  "terminal.integrated.profiles.windows": {
+    "cmder": {
+      "path": "C:\\WINDOWS\\System32\\cmd.exe",
+      "args": ["/K", "C:\\Program Files\\cmder\\vendor\\bin\\vscode_init.cmd"]
+    }
+  },
+  "terminal.integrated.defaultProfile.windows": "cmder"
+}
