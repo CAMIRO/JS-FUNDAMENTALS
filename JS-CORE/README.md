@@ -46,3 +46,10 @@ replaces
 let meses = ["enero", "febrero", "lunes", "martes"];
 let dias = meses.splice(2, 2, "marzo", "abril");
 ```
+
+### spread [...str]
+
+```
+const str = 'Tt!e rel'
+let srtArr = [...str] // ['T','t','!','e',' ','r','e','l']
+```

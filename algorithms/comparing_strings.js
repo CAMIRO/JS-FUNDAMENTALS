@@ -10,7 +10,6 @@
 // The function checks if it is possible to generate the sentence
 // using the characters. It returns true if it is possible, otherwise it returns false.
 const generateSentence = (characters, sentence) => {
-  // write your solution here
   let charMap = {}; // Create an object to store character count
   let canGenerate = true; // Set boolean flag to true
 

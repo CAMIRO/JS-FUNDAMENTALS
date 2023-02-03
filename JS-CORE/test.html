@@ -3,7 +3,6 @@
     // console.warn(!true) // 1
     // console.warn(typeof !true) // num
 </script>
-
 <script>
     // Object access
     // let data = 'size';
@@ -27,7 +26,6 @@
     // console.log(a);
     // console.log(b);
     // console.log(a === b);
-
 </script>
 <script>
     // BY REFERENCE ( all objects including functions )
@@ -64,7 +62,7 @@
 </script>
 <script>
     // function getAge(){
-    //     'use strict'
+    //     'use dataict'
     //     age = 21;
     //     console.log(age); // ReferenceError: age is not defined (because age has not a let or var or const"we cant do hoisting")
     // }
@@ -108,7 +106,6 @@
 
     // // output : First, Three, Two
 </script>
-
 <!-- <div onclick="console.log('One')">
     <div onclick="console.log('Two')" >
         <button onclick="console.log('Three')">Click Me</button>
@@ -119,14 +116,12 @@ output: Three, Two, One
 -->
 <script>
     // const person = {name: 'Mario'}
-
     // function sayHi(age) {
     //     return `${this.name} is ${age}`
     // }
     // console.log(sayHi.call(person, 21)); // Mario is 21
     // console.log(sayHi.bind(person, 21)); // ƒ sayHi(age) {...} // we need to call when is binding
     // console.log(sayHi.bind(person, 21)()); // Mario is 21
-    
 </script>
 <script>
     // function sayHi() {
@@ -141,13 +136,12 @@ output: Three, Two, One
     // console.log(typeof sayHi()); // function
 </script>
 <script>
-    // console.log(typeof typeof 1); // string
+    // console.log(typeof typeof 1); // dataing
 </script>
 <script>
     // const numbers = [1,2,3]
     // numbers[9] = 11;
     // console.log(numbers); // [1,2,3,empty x 6, 11]
-
 </script>
 <script>
     // const numbers = [1,2,3]
@@ -166,7 +160,6 @@ output: Three, Two, One
     // console.warn(setInterval(()=> console.log('Hi'),1000)); // 1
     // console.warn(setInterval(()=> console.log('Hi'),1000)); // 2
     // console.warn(setInterval(()=> console.log('Hi'),1000)); // 3
-
 </script>
 <script>
     // console.log([...'camilo']);//['c', 'a', 'm', 'i', 'l', 'o']
@@ -175,19 +168,19 @@ output: Three, Two, One
 <script>
     // let data = 3 + 4 + '5' 
     // console.log(data); // 75
-    // console.log(typeof data); // string
+    // console.log(typeof data); // dataing
 </script>
 <script>
     // it is taking typeof 3 and executing first 
     // console.log(typeof 3 + 4 + '5'); // number45 
 </script>
 <script>
-    // let num = +'5' // if you put a + before a string, it will convert into a number
+    // let num = +'5' // if you put a + before a dataing, it will convert into a number
     // let char = +'a' // event letters: This will be NaN
     // console.log(typeof num);
 </script>
 <script>
-    // console.log(typeof (3 + 4 + '5' )); // string
+    // console.log(typeof (3 + 4 + '5' )); // dataing
     // console.log(typeof (3 + 4 + + '5' )); // number
 </script>
 <script>
@@ -205,11 +198,8 @@ output: Three, Two, One
     // function getInfo(member) {
     //     member.name = 'juan'
     // }
-
     // const person = { name: 'sarah'}
-
     // getInfo(person)
-
     // console.log(person); // { name: 'juan'} because objs are passed by reference in function's parameters
 </script>
 <script>
@@ -251,12 +241,10 @@ output: Three, Two, One
 <script>
  // console.warn(true + +'10' ); // 11
 </script>
-
 <script>
     // let arr = [1, 'hello', {x : 2}, [3,4]]
     // console.log('arr: ', arr);
 </script>
-
 <script>
     // let arr = [1, 'hello', {x : 2}, [3,4],{y:5}]
     // for (let i = 0; i< arr.length;i++){
@@ -265,11 +253,44 @@ output: Three, Two, One
     //     }
     //     else console.log(arr[i]);
     // }
-
 </script>
-
 <script>
-     let uniq = new Set();
-     console.log("🚀 ~ file: test.html:273 ~ uniq", uniq)
-     
+    // let uniq = new Set();
+    // console.log("🚀 ~ file: test.html:273 ~ uniq", uniq)
+</script>
+<script>
+    // const data = 'Tt!eh rella'
+    // let srtArr = [...data] // ['T', 't', '!', 'e', 'h', ' ', 'r', 'e', 'l', 'l', 'a']
+    // console.log("🚀 ~ file: test.html:278 ~ srtArr", srtArr)
+</script>
+<script>
+//Let’s say we are dealing with sending data over the internet, 
+//to make it simple, assume this plain text, 
+//in order to save some bandwidth we want to compress it, according to the following function:
+
+// compress(aaaaca) -> ax4ca
+// // compress(aaaaaabbbcaaa) -> ax6bx3cax3
+// // compress(mississippi) -> misx2isx2ipx2i
+
+// const compress = data => {
+//   let result = '';
+//   let count = 0;
+//   let current = data.charAt(0);
+//   for (let i = 0; i < data.length; i++) {
+//     if (data.charAt(i) === current) {
+//       count++;
+//     } else {
+//       result += current + (count > 1 ? `x${count}` : '');
+//       current = data.charAt(i);
+//       count = 1;
+//     }
+//   }
+//   result += current + (count > 1 ? `x${count}` : '');
+//   console.log(result);
+//   return result;
+// }
+// compress('aaaaca')
+// compress('aaaaaabbbcaaa') 
+// compress('mississippi')
+
 </script>
