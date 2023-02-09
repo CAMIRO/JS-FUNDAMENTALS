@@ -7,3 +7,8 @@ console.log(validatePIN("12345")); // false
 console.log(validatePIN("1")); // false
 console.log(validatePIN(".123")); // false
 console.log(validatePIN("a123")); // false
+
+// another approach
+function validatePIN(pin) {
+  return /^(\d{4}|\d{6})$/.test(pin);
+}
