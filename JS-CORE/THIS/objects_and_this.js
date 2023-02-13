@@ -1,8 +1,7 @@
-//// more here: https://www.udemy.com/course/understand-javascript/learn/lecture/2237526#overview// functions (all of them) will point to the global object:
-function a() {
-  console.log(this) //// this will point to the global object
-}
-a()
+//// more here: https://www.udemy.com/course/understand-javascript/learn/lecture/2237526#overview// functions (all of them) will point to the global object:// function a() {
+//   console.log(this) //// this will point to the global object
+// }
+// a()
 
 // Objects and methods:
 const b = {
