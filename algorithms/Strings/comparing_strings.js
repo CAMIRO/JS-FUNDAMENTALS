@@ -1,5 +1,5 @@
 //Write a function to determine if you can generate a sentence using the avaiable characters.
-// If you can generate the sentence you should return true otherwise reutrn false.
+// If you can generate the sentence you should return true otherwise return false.
 // Sample Input
 //   characters = "Bstesi Tt!eh rella "
 //   sentence = "Taller is the Best!"
