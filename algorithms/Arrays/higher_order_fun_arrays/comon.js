@@ -8,20 +8,11 @@
 
 // Good luck!
 
-function common(a,b,c){
-    let big = [...a, ...b, ...c].sort()
-
-    const repeated = big.filter((value, index, array) => {
-        return value === array[index + 1]
-    })
-    
-    const mySet = new Set(repeated)
-    console.log("🚀 ~ file: comon.js:19 ~ common ~ mySet:", repeated)
-
-    const myArray = Array.from(mySet);
-
-    return myArray.reduce((acc, el) => el + acc , 0) 
-  
-}
+function common(ar1,ar2,ar3){
+    const comnonOne = ar1.filter(num => ar2.includes(num))
+    const commonTwo = ar3.filter(num => comnonOne.includes(num))
+    const sum = commonTwo.reduce((ct, el) => ct += el, 0)
+    return sum
+}   
 
 console.log(common([1,2,2,3],[5,3,2,2],[7,3,2,2]));
